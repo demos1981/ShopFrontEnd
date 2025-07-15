@@ -3,7 +3,5 @@ export const catalogCategoriesData = [
   "WOMEN'S",
   "CHILDREN'S",
   "ARRIVAL",
-  "ACCESSORIES MAN'S",
-  "ACCESSORIES WOMAN'S",
-  "ACCESSORIES CHILDREN'S",
+  "ACCESSORIES",
 ];
