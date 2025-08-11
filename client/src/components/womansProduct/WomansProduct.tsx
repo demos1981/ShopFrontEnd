@@ -21,7 +21,7 @@ export const WomansProduct: React.FC = () => {
             className="bg-white shadow-lg rounded-lg overflow-hidden"
           >
             <img
-              // src={product.photoUrl}
+              src={product.photoUrl}
               alt={product.name}
               className="w-full h-48 object-cover"
             />

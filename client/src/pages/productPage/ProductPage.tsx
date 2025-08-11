@@ -36,7 +36,7 @@ export const ProductPage: React.FC = () => {
         role={product.role}
         sex={product.sex}
         category={product.category}
-        imageUrl={product.imageUrl} // Ensure this is a valid URL
+        photoUrl={product.imageUrl} // Ensure this is a valid URL
       />
     </>
   );

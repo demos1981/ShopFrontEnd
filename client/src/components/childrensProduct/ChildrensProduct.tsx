@@ -20,7 +20,7 @@ export const ChildrensProduct: React.FC = () => {
             className="bg-white shadow-lg rounded-lg overflow-hidden"
           >
             <img
-              // src={product.imageUrl}
+              src={product.photoUrl}
               alt={product.name}
               className="w-full h-48 object-cover"
             />

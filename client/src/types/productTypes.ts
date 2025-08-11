@@ -22,7 +22,7 @@ export interface ProductProps {
   color: string;
   size: string | number;
   role: string;
-  imageUrl: string;
+  photoUrl: string;
   sex: string;
   category: string;
 }
