@@ -1,13 +1,13 @@
 import React from "react";
-import { Product } from "types/productTypes";
+import { useGetAccessoriesProductsQuery } from "app/store/api/productApi";
 
-interface AccessoriesProductProps {
-  products: Product[];
-}
-
-export const AccessoriesProduct: React.FC<AccessoriesProductProps> = ({
-  products,
-}) => {
+export const AccessoriesProduct: React.FC = () => {
+  const { data: products, isLoading, error } = useGetAccessoriesProductsQuery();
+  if (isLoading) return <p>Loading accessories products...</p>;
+  if (error) return <p>Error loading accessories products.</p>;
+  if (!products || products.length === 0) {
+    return <p>No products found.</p>;
+  }
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Accessories</h1>
@@ -18,7 +18,7 @@ export const AccessoriesProduct: React.FC<AccessoriesProductProps> = ({
             className="bg-white shadow-lg rounded-lg overflow-hidden"
           >
             <img
-              src={product.imageUrl}
+              src={product.photoUrl}
               alt={product.name}
               className="w-full h-48 object-cover"
             />
